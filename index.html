@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite Mail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main-contains">
+        <h1>Invite Mail</h1>
+        <form id="inviter-detais">
+
+            <label for="name">Name:  *</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" class="user-value">
+            <small>Enter Your Name</small>
+
+            <label for="mail">Email Id:  *</label>
+            <input type="text" name="email" id="mail" placeholder="Enter Your Email" class="user-value">
+            <small>Enter Your Email</small>
+
+            <label for="password">Password:  *</label>
+            <input type="text" name="pass" id="password" placeholder="Enter the Password" class="user-value">
+            <small>Enter Password</small>
+
+            <div class="add-mails">
+                <label for="invite-id">Email Add:  *</label>
+                <input type="email" name="invite-email" id="invite-id" class="user-value">
+                <small>Enter The Inviter Mail</small>
+                <button id="add" name="add-btn">Add Email</button>
+                
+            </div>
+            <ul class="list-inviters">
+                
+            </ul>
+
+            <label for="role">Role:</label>
+            <select name="position" id="role">
+                <option>Team Leader</option>
+                <option>Admim</option>
+                <option>Manager</option>
+                <option>Employee</option>
+            </select>
+
+            <label for="phone">Phone Number:  *</label>
+            <input type="number" name="number" id="phone" placeholder="Enter your 10 digit Phone Number" class="user-value">
+            <small>Enter Your 10 Digit Phone Number</small>
+
+            <label for="address">Address:  *</label>
+            <textarea name="address" id="address" placeholder="Enter Your Address" class="user-value"></textarea>
+            <small>Enter Your Address</small>
+
+            <label for="location">Location:</label>
+            <select name="location" id="location">
+                <option>Chennai</option>
+                <option>Tiruvallur</option>
+                <option>Kanchipuram</option>
+                <option>Villupuram</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Submit</button>
+
+            <a href="list.html" class="page-link">list Details</a>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(45deg, #84d4a3, #e59df377);
+}
+
+.main-contains {
+    margin-bottom: 2rem;
+}
+label{
+    color: white;
+    margin: .5rem 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    background-image: linear-gradient(red, blue);
+    color: transparent;
+    background-clip: text;
+}
+
+#inviter-detais {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 8px;
+    background: linear-gradient(35deg, #cab7cc, #36c4c9);
+    
+}
+input,textarea,select{
+    padding: .8rem;
+    border-radius: 6px;
+    border: none;
+    /* margin: .5rem 0; */
+    cursor: pointer;
+    
+}
+.add-mails{
+    display: flex;
+    flex-direction: column;
+}
+#add{
+    width: 50%;
+    margin: .5rem auto;
+    padding: .8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+.page-link{
+    text-align: center;
+    text-decoration: none;
+    color: #17021b;
+    display: block;
+}
+.submit-btn{
+    padding: .8rem;
+    border-radius: 6px;
+    border: none;
+    margin: .5rem 0;  
+    cursor: pointer; 
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    list-style: none;
+    border: 1px solid white;
+    margin: .3rem 0;
+    color: rgba(0, 0, 0, 0.767);
+    border-radius: 5px;
+}
+
+table{
+    width: 90%;
+    margin: 3rem auto;
+    /* background: linear-gradient(right to bottom, #1eca52,#84d4a3); */
+    /* background-color: #1eca52; */
+    padding: 1rem;
+    border-radius: 8px;
+   
+}
+td,th{
+    border: 1px solid white;
+    padding: .5rem;
+    text-align: center;
+}
+.delete-btn{
+    padding: .3rem;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.459);
+    color: white;
+}
+.delete-btn:hover{
+    background-color: rgb(231, 9, 9);
+}
+.table-head{
+    text-align: center;
+}
+
+small{
+    display:none;
+    color: rgb(245, 28, 13);
+}
