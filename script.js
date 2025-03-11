@@ -30,10 +30,19 @@ function appendInviters(inviteMail) {
     const li = document.createElement('li');
     li.className = 'list';
     li.innerHTML = `${inviteMail} <i class="fa-solid fa-xmark"></i>`;
-
     userContainer.appendChild(li);
-    li.querySelector('i').addEventListener('click', () => li.remove());
+    const removeIcon = li.querySelector('i');
+    removeIcon.addEventListener('click', () => {
+
+        const removeUser = inviteEmails.indexOf(inviteMail);
+
+        if (removeUser !== -1) {
+            inviteEmails.splice(removeUser, 1);
+        }
+            li.remove();
+    });
 }
+
 
 if (addBtn) {
     addBtn.addEventListener('click', (event) => {
