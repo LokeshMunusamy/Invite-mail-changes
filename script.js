@@ -51,17 +51,24 @@ if (addBtn) {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    // console.log(inviteEmails);
+   
+    let errorDisplay = true;
     userInputs.forEach((nav, i) => {
         if (nav.value === '') { 
             navigation[i].style.display = 'block';  
+            errorDisplay = false;
         } else {
             navigation[i].style.display = 'none'; 
         }
+
     });
+
+    if(!errorDisplay){
+        return;
+    }
     
     const formData = new FormData(form);
-
+    const userName = formData.get('name').trim();
     const email = formData.get('email');
     const password = formData.get('pass');
     const phone = formData.get('number');
@@ -78,9 +85,14 @@ form.addEventListener('submit', (event) => {
         inviteEmails.push(formData.get('invite-email'));
     }
 
+    if(!userName){
+        navigation[0].style.display = 'block';
+        return;
+    }
+
     if (validatedEmail && validatedPassword && validatedPhone) {
         storage.push({
-            Name: formData.get('name'),
+            Name: userName,
             Email: validatedEmail,
             Password: validatedPassword,
             Inviters: inviteEmails.join(' , '), 
